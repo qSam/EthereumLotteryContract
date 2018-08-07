@@ -8,4 +8,8 @@ contract Lottery {
         // Get address of sender
         manager = msg.sender;
     }
+
+    function enter() public payable {
+      
+    }
 }
