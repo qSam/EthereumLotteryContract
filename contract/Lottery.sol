@@ -10,6 +10,6 @@ contract Lottery {
     }
 
     function enter() public payable {
-      
+      players.push(msg.sender);
     }
 }
