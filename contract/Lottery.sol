@@ -23,6 +23,7 @@ contract Lottery {
         //winning player
         uint index = random() % players.length;
         //Transfer ether balance to winner
-                players[index].transfer(this.balance);
+        players[index].transfer(this.balance);
+        players = new address[](0);
     }
 }
