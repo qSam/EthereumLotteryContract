@@ -19,11 +19,15 @@ contract Lottery {
     }
 
     function pickWinner() public {
+       //Make sure only manager can pick pickWinner
+        require(msg.sender == manager);
+      
         //Use modulus operator to determine index of
         //winning player
         uint index = random() % players.length;
         //Transfer ether balance to winner
         players[index].transfer(this.balance);
+        //Create new empty players array
         players = new address[](0);
     }
 }
