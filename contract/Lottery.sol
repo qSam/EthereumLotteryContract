@@ -18,10 +18,8 @@ contract Lottery {
         return uint(keccak256(block.difficulty, now, players));
     }
 
-    function pickWinner() public {
-       //Make sure only manager can pick pickWinner
-        require(msg.sender == manager);
-      
+    function pickWinner() public restricted {
+
         //Use modulus operator to determine index of
         //winning player
         uint index = random() % players.length;
@@ -29,5 +27,10 @@ contract Lottery {
         players[index].transfer(this.balance);
         //Create new empty players array
         players = new address[](0);
+    }
+
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
     }
 }
