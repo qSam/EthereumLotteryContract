@@ -1,5 +1,5 @@
 {
-  "name": "etheruemsmartcontract",
+  "name": "etheruemlotterycontract",
   "version": "1.0.0",
   "description": "Repo to test out creation of smart contracts with Ehtereum",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qSam/EtheruemSmartContract.git"
+    "url": "git+https://github.com/qSam/EtheruemLotteryContract.git"
   },
   "author": "Laghari, Q",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qSam/EtheruemSmartContract/issues"
+    "url": "https://github.com/qSam/EtheruemLotteryContract/issues"
   },
-  "homepage": "https://github.com/qSam/EtheruemSmartContract#readme",
+  "homepage": "https://github.com/qSam/EtheruemLotteryContract#readme",
   "dependencies": {
     "ethereumjs-wallet": "^0.6.0",
     "ganache-cli": "^6.1.0",
