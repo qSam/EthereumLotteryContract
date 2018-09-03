@@ -98,5 +98,11 @@ describe('Lottery Contract', () => {
     const difference = finalBalance - initialBalance;
     console.log('Difference in bal : ', finalBalance - initialBalance);
     assert(difference > web3.utils.toWei('1.8', 'ether'));
+
+    //Assert player array is empty
+    const players = await lottery.methods.getPlayers().call({
+      from: accounts[0]
+    });
+    assert.equal(0, players.length);
   });
 });
